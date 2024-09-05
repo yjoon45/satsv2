@@ -1,0 +1,30 @@
+---
+import logo from '@images/logo.svg';
+import { Image } from 'astro:assets';
+import Social from './social.astro';
+---
+
+<footer class="container space-y-10 lg:py-10 pb-5">
+  <Image
+    class="mx-auto taos:opacity-0 duration-700 delay-500"
+    width={logo.width}
+    src={logo}
+    alt="Sats"
+    loading="lazy"
+  />
+
+  <nav
+    class="w-fit mx-auto text-center text-lg grid grid-cols-2 lg:grid-cols-4 gap-5 justify-center"
+  >
+    <a class="hover:text-orange" href="#">Let's talk</a>
+    <a class="hover:text-orange" href="#">Home</a>
+    <a class="hover:text-orange" href="#">Our work</a>
+    <a class="hover:text-orange" href="/about">About us</a>
+  </nav>
+
+  <div class="w-fit mx-auto">
+    <Social />
+  </div>
+
+  <p class="text-center">© 2024 SATS. All rights reserved.</p>
+</footer>

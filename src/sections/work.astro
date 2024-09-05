@@ -1,0 +1,79 @@
+---
+import img from '@images/img-3928.webp';
+import clients from '@images/clients-bar.webp';
+import { Image } from 'astro:assets';
+---
+
+<section class="container">
+  <div class="lg:w-fit mx-auto mb-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-0">
+      <div
+        class="lg:h-96 h-48 md:w-80 border border-neutral-700 p-5 grid order-3 lg:order-none -mb-5 lg:mb-0"
+      >
+        <p
+          class="text-neutral-500 uppercase text-xl duration-500 delay-500 taos:opacity-0"
+        >
+          KEYSTAT
+        </p>
+        <div class="mt-auto duration-500 delay-500 taos:opacity-0">
+          <p class="text-neutral-500 uppercase text-xl">Projects</p>
+          <p class="text-3xl font-semibold">20%</p>
+        </div>
+      </div>
+
+      <div class="lg:relative isolate lg:mb-0 order-1 lg:order-none">
+        <p
+          class="duration-500 delay-1000 taos:opacity-0 lg:text-4xl text-3xl lg:w-[510px] max-w-screen-sm lg:absolute left-0 top-1/2 lg:-translate-y-1/2 lg:-translate-x-28"
+        >
+          We're a squad of <strong class="text-orange">badass creatives</strong>
+          who love a good challenge
+        </p>
+      </div>
+
+      <div class="lg:relative isolate order-2 lg:order-none">
+        <p
+          class="duration-500 delay-1000 taos:opacity-0 lg:max-w-screen-sm lg:w-[400px] text-2xl lg:absolute lg:right-5 lg:top-1/2 lg:-translate-y-1/2 font-light"
+        >
+          We're all about working with the bold, the daring, and the adventurous
+          - the folks who aren't afraid to stand out in a sea of sameness
+        </p>
+      </div>
+
+      <div
+        class="-mt-px lg:-ml-px lg:h-96 h-48 md:w-80 border border-neutral-700 grid p-5 order-4 lg:order-none"
+      >
+        <p
+          class="duration-500 delay-500 taos:opacity-0 text-neutral-500 uppercase text-xl"
+        >
+          KEYSTAT
+        </p>
+        <div class="mt-auto duration-500 delay-500 taos:opacity-0">
+          <p class="text-neutral-500 uppercase text-xl">EXPERIENCE</p>
+          <p class="text-3xl font-semibold">7 Years</p>
+        </div>
+      </div>
+    </div>
+    <Image
+      src={img}
+      alt=""
+      width={img.width * 0.8}
+      class="ml-auto mr-px hidden lg:block"
+      role="presentation"
+      loading="lazy"
+      fetchpriority="low"
+    />
+  </div>
+
+  <div
+    class="delay-[300ms] duration-[600ms] taos:opacity-0 overflow-x-auto max-w-screen-lg mx-auto no-scrollbar"
+  >
+    <Image
+      class="mx-auto max-w-none lg:max-w-full"
+      src={clients}
+      alt=""
+      loading="lazy"
+    />
+  </div>
+
+  <hr class="my-10 border-neutral-700" />
+</section>

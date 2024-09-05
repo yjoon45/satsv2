@@ -1,0 +1,85 @@
+---
+import img from '@images/img-3289.webp';
+import { Image } from 'astro:assets';
+---
+
+<section class="container grid md:grid-cols-2 gap-10 lg:gap-40">
+  <div>
+    <div class="sticky top-12">
+      <p class="text-center mb-2">Excellence across multiple disciplines</p>
+      <p class="text-center text-4xl lg:text-5xl font-semibold mb-12">
+        We Specialize
+      </p>
+      <Image class="mx-auto" width={img.width * 0.7} src={img} alt="" />
+    </div>
+  </div>
+  <div>
+    <div
+      class="lg:space-y-8 space-y-5 duration-700 taos:translate-y-[200px] taos:opacity-0"
+    >
+      <h2 class="text-orange font-semibold text-3xl">01. Web3 Development</h2>
+      <p class="text-lg">
+        We aim to understand our partners' needs and create sustainable products
+        through personalized approaches, continuous development, collaboration,
+        and communication.
+      </p>
+      <ul class="space-y-3 text-lg list-disc pl-5">
+        <li>Smart contracts</li>
+        <li>NFTs</li>
+        <li>Decentralized applications</li>
+        <li>Tokenomics</li>
+      </ul>
+    </div>
+    <hr class="border-neutral-700 my-10" />
+    <div
+      class="lg:space-y-8 space-y-5 duration-700 taos:translate-y-[200px] taos:opacity-0"
+    >
+      <h2 class="text-orange font-semibold text-3xl">02. Design</h2>
+      <p class="text-lg">
+        Our designers and developers collaborate closely to create visually
+        strong and easy-to-use interfaces, while also emphasizing user testing
+        and behavior analysis for market fit in blockchain solutions.
+      </p>
+      <ul class="space-y-3 text-lg list-disc pl-5">
+        <li>User experience (UX)</li>
+        <li>User interface (UI)</li>
+        <li>User testing</li>
+        <li>Customer behaviour analysis</li>
+      </ul>
+    </div>
+    <hr class="border-neutral-700 my-10" />
+    <div
+      class="lg:space-y-8 space-y-5 duration-700 taos:translate-y-[200px] taos:opacity-0"
+    >
+      <h2 class="text-orange font-semibold text-3xl">03. Consulting</h2>
+      <p class="text-lg">
+        We provide expert advice on strategy, legal, growth, scaling, and
+        infrastructure to navigate the complexities of the blockchain space and
+        take your project to the next level.
+      </p>
+      <ul class="space-y-3 text-lg list-disc pl-5">
+        <li>Web3 strategy</li>
+        <li>Legal consulting</li>
+        <li>Growth & Scaling</li>
+        <li>Infrastructure</li>
+      </ul>
+    </div>
+    <hr class="border-neutral-700 my-10" />
+    <div
+      class="lg:space-y-8 space-y-5 duration-700 taos:translate-y-[200px] taos:opacity-0"
+    >
+      <h2 class="text-orange font-semibold text-3xl">04. Web2 development</h2>
+      <p class="text-lg">
+        Our parent company's decade-long experience in developing and growing
+        web and mobile applications complements our blockchain development
+        specialization for a comprehensive solution.
+      </p>
+      <ul class="space-y-3 text-lg list-disc pl-5">
+        <li>Frontend</li>
+        <li>Backend</li>
+        <li>QA</li>
+        <li>Project management</li>
+      </ul>
+    </div>
+  </div>
+</section>

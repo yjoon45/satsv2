@@ -1,0 +1,21 @@
+---
+import img from '@images/img-3829v2.svg';
+import img2 from '@images/img-3890.svg';
+import { Image } from 'astro:assets';
+---
+
+<section class="container grid duration-700 taos:opacity-0">
+  <Image
+    class="col-start-1 row-start-1 mx-auto"
+    src={img}
+    width={img.width * 0.8}
+    alt="turn your concept into a live product"
+    loading="lazy"
+  />
+  <Image
+    class="col-start-1 row-start-1 mx-auto translate-x-8 lg:w-[334px] w-[130px]"
+    src={img2}
+    alt=""
+    loading="lazy"
+  />
+</section>

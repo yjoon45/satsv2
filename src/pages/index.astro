@@ -1,0 +1,24 @@
+---
+import Banner from '@sections/banner.astro';
+import Header from '@components/header.astro';
+import Layout from '@layouts/Layout.astro';
+import Projects from '@sections/projects.astro';
+import Work from '@sections/work.astro';
+import Services from '@sections/services.astro';
+import Moto from '@sections/moto.astro';
+import Footer from '@components/footer.astro';
+---
+
+<Layout title="Welcome to Sats">
+  <Header />
+
+  <main class="lg:space-y-64 md:mb-64 space-y-16 lg:mb-32 mb-16">
+    <Banner />
+    <!-- <Projects /> -->
+    <Work />
+    <Services />
+    <Moto />
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,48 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import '@fontsource-variable/montserrat';
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <ViewTransitions />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+  </head>
+  <body class="bg-dark text-white">
+    <slot />
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+  </body>
+</html>
+<style is:global>
+  @font-face {
+    font-family: 'bahnschrift';
+    src: url(/fonts/bahnschrift.woff) format('woff');
+  }
+
+  @tailwind utilities;
+  /* add the code bellow */
+  @layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+</style>

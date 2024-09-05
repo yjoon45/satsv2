@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets';
+import img from '@images/img-2789.webp';
+import img2 from '@images/img-3927.svg';
+import img3 from '@images/img-4838.svg';
+---
+
+<section class="relative isolate md:mt-20 mt-10">
+  <div class="container">
+    <div class="relative isolate mx-auto w-fit">
+      <Image class="mx-auto" src={img} alt="humble hungry smart" />
+      <p
+        class="mt-6 xl:mt-0 xl:absolute bottom-4 right-0 xl:w-1/2 xl:translate-y-14 w-full xl:max-w-[570px] mx-auto xl:mx-0"
+      >
+        SATS is your trusted partner in the blockchain ecosystem, backed by 2
+        years of development experience. We offer a comprehensive suite of
+        services including software development, product discovery and strategic
+        consulting. Our network of investor relations, PR, marketing and legal
+        expertise gives you a unique competitive advantage. Committed to
+        long-term partnerships, we also explore opportunities for equity-based
+        collaborations. Join us as we continue to drive innovation in the
+        blockchain space.
+      </p>
+    </div>
+  </div>
+
+  <Image
+    class="absolute top-auto left-0 -z-10 pointer-events-none lg:w-[138px] w-[90px]"
+    src={img2}
+    alt=""
+    role="presentation"
+  />
+  <Image
+    class="absolute top-0 right-0 -z-10 pointer-events-none lg:w-[42px] w-[32px]"
+    src={img3}
+    alt=""
+    role="presentation"
+  />
+</section>

@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+import logo from '@images/logo.svg';
+import img from '@images/img-2898.webp';
+import img2 from '@images/img-2899.webp';
+
+type ownersType = {
+  pic: ImageMetadata;
+  desc: string;
+}[];
+
+const owners: ownersType = [
+  {
+    pic: img,
+    desc: "We're all about working with the bold, the daring, and the adventurous - the folks who aren't afraid to stand out in a sea of sameness",
+  },
+  {
+    pic: img2,
+    desc: "We're all about working with the bold, the daring, and the adventurous - the folks who aren't afraid to stand out in a sea of sameness",
+  },
+];
+---
+
+<section class="container">
+  <Image class="w-8/12 mx-auto mb-6 lg:mb-0" src={logo} alt="" />
+  {
+    owners.map((owner, index) => (
+      <div class="grid lg:grid-cols-[320px_320px] gap-4 lg:gap-10 w-fit mx-auto mb-20">
+        <Image
+          class="lg:w-80 mx-auto lg:mx-0"
+          class:list={[
+            index === 0 ? 'lg:-translate-y-8' : '',
+            index % 2 !== 0 ? 'lg:order-last' : '',
+          ]}
+          src={owner.pic}
+          alt=""
+          loading="lazy"
+        />
+        <div class="flex items-end delay-500 duration-700 taos:opacity-0 taos:translate-y-10">
+          <p class="text-2xl font-light">{owner.desc}</p>
+        </div>
+      </div>
+    ))
+  }
+</section>

@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+import img from '@images/t-1.webp';
+import img2 from '@images/t-2.webp';
+import img3 from '@images/t-3.webp';
+import img4 from '@images/t-4.webp';
+
+type teamType = {
+  pic: ImageMetadata;
+  name: string;
+  title: string;
+}[];
+
+const teams: teamType = [
+  {
+    pic: img,
+    name: '',
+    title: '',
+  },
+  {
+    pic: img2,
+    name: '',
+    title: '',
+  },
+  {
+    pic: img3,
+    name: '',
+    title: '',
+  },
+  {
+    pic: img4,
+    name: 'Pravin Sharma',
+    title: 'Lead Designer',
+  },
+];
+---
+
+<section class="container">
+  <div class="mx-auto grid grid-cols-1 lg:grid-cols-4 gap-16 lg:gap-6">
+    {
+      teams.map((team, index) => (
+        <div
+          class="relative group w-fit mx-auto duration-700 taos:opacity-0 taos:translate-y-10"
+          style={{ transitionDelay: index * 100 + 'ms' }}
+        >
+          <div class="bg-white group-hover:opacity-100 lg:opacity-0 transition-opacity text-sm font-medium text-dark w-full h-full absolute top-10 left-4 lg:top-0 lg:left-0 -z-[1] grid items-end justify-between grid-cols-[auto_auto] px-3 py-2">
+            <p>{team.name}</p>
+            <p>{team.title}</p>
+          </div>
+          <Image
+            class="mx-auto lg:group-hover:-translate-x-5 lg:group-hover:-translate-y-6 transition-transform duration-300"
+            src={team.pic}
+            alt=""
+          />
+        </div>
+      ))
+    }
+  </div>
+</section>

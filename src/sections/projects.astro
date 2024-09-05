@@ -1,0 +1,41 @@
+---
+import img from '@images/work1.webp';
+import img2 from '@images/work2.webp';
+import img3 from '@images/work3.webp';
+import { Image } from 'astro:assets';
+
+const works = [
+  {
+    src: img,
+    title: 'LaunchR',
+  },
+  {
+    src: img2,
+    title: 'EquityVault',
+  },
+  {
+    src: img3,
+    title: 'Divigen',
+  },
+];
+---
+
+<section class="overflow-x-auto no-scrollbar">
+  <div class="flex gap-6 pl-32">
+    {
+      works.map((work) => (
+        <div class="flex-shrink-0 w-[40%] aspect-[700/458]">
+          <div class="bg-neutral-800 w-full h-full mb-5">
+            <Image
+              class="w-full h-full object-cover"
+              loading="lazy"
+              src={work.src}
+              alt=""
+            />
+          </div>
+          <p class="text-2xl font-semibold">{work.title}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

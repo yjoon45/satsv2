@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+import img from '@images/arrow-121.svg';
+const currentPage = Astro.url.pathname;
+---
+
+<nav
+  class="xl:h-[74px] xl:w-fit xl:mx-auto xl:bg-white rounded-full flex xl:flex-row flex-col items-center gap-8 xl:pl-[9px] xl:pr-[9px] xl:text-dark text-white"
+>
+  <a
+    href="/about"
+    class="transition-colors px-9 py-4 rounded-full"
+    class:list={currentPage === '/about' ? 'bg-neutral-200' : ''}
+  >
+    About
+  </a>
+
+  <a class="transition-colors px-9 py-4 rounded-full" href="#"> Our Work </a>
+
+  <a
+    href="#"
+    class="hover:bg-orange transition-colors text-white grid gap-x-2 grid-cols-[max-content_24px] items-center place-content-center h-[57px] bg-orange xl:bg-dark px-10 rounded-full"
+  >
+    Let's Discuss
+    <Image
+      width={img.width * 0.2}
+      height={50}
+      src={img}
+      alt=""
+      role="presentation"
+    />
+  </a>
+</nav>

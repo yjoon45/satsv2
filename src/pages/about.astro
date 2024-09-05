@@ -1,0 +1,20 @@
+---
+import Header from '@components/header.astro';
+import Layout from '@layouts/Layout.astro';
+import Footer from '@components/footer.astro';
+import Banner from '@sections/about/banner.astro';
+import Owner from '@sections/about/owner.astro';
+import Team from '@sections/about/team.astro';
+---
+
+<Layout title="About - Sats">
+  <Header />
+
+  <main class="lg:space-y-64 md:mb-64 space-y-16 lg:mb-32 mb-16">
+    <Banner />
+    <Owner />
+    <Team />
+  </main>
+
+  <Footer />
+</Layout>

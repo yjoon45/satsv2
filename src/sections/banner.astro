@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import img from '@images/img-2828.webp';
+import img2 from '@images/img-3927.svg';
+import img3 from '@images/img-4838.svg';
+---
+
+<section class="relative isolate md:mt-36 mt-10 duration-700 taos:opacity-0">
+  <div class="container">
+    <Image
+      class="w-[162px] lg:w-[262px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 pointer-events-none"
+      src={img}
+      role="presentation"
+      alt=""
+    />
+    <h1
+      class="text-center text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight"
+    >
+      We focus on Blockchain
+      <br class="hidden md:block" /> projects from idea to product
+    </h1>
+  </div>
+
+  <Image
+    class="absolute top-auto left-0 -z-10 pointer-events-none lg:w-[138px] w-[90px]"
+    src={img2}
+    alt=""
+    role="presentation"
+  />
+  <Image
+    class="absolute top-0 right-0 -z-10 pointer-events-none lg:w-[42px] w-[32px]"
+    src={img3}
+    alt=""
+    role="presentation"
+  />
+</section>
